@@ -6,4 +6,9 @@
     <string name="password">Password</string>
     <string name="btn_login">Login</string>
     <string name="already_signedin">You are now done with login. Move to your real MainActivity</string>
+
+    <string name="prompt_info_title">Sample App Authentication</string>
+    <string name="prompt_info_subtitle">Please login to get access</string>
+    <string name="prompt_info_description">Sample App is using Android biometric authentication</string>
+    <string name="prompt_info_use_app_password">Use app password</string>
 </resources>
