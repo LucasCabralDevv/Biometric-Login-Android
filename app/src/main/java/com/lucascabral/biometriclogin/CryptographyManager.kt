@@ -1,10 +1,8 @@
 package com.lucascabral.biometriclogin
 
 import android.content.Context
-import android.os.Build
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
-import androidx.annotation.RequiresApi
 import com.google.gson.Gson
 import java.nio.charset.Charset
 import java.security.KeyStore
@@ -60,7 +58,6 @@ private class CryptographyManagerImpl : CryptographyManager {
     private val ENCRYPTION_PADDING = KeyProperties.ENCRYPTION_PADDING_NONE
     private val ENCRYPTION_ALGORITHM = KeyProperties.KEY_ALGORITHM_AES
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun getInitializedCipherForEncryption(keyName: String): Cipher {
         val cipher = getCipher()
         val secretKey = getOrCreateSecretKey(keyName)
@@ -68,7 +65,6 @@ private class CryptographyManagerImpl : CryptographyManager {
         return cipher
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun getInitializedCipherForDecryption(
         keyName: String,
         initializationVector: ByteArray
@@ -94,7 +90,6 @@ private class CryptographyManagerImpl : CryptographyManager {
         return Cipher.getInstance(transformation)
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun getOrCreateSecretKey(keyName: String): SecretKey {
         // If Secretkey was previously created for that keyName, then grab and return it.
         val keyStore = KeyStore.getInstance(ANDROID_KEYSTORE)

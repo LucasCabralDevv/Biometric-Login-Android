@@ -1,9 +1,10 @@
-package com.lucascabral.biometriclogin
+package com.lucascabral.biometriclogin.ui.viewmodel
 
 import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.lucascabral.biometriclogin.*
 
 class LoginViewModel : ViewModel() {
 

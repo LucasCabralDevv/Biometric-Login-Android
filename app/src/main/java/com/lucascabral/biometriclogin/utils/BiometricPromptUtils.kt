@@ -1,9 +1,10 @@
-package com.lucascabral.biometriclogin
+package com.lucascabral.biometriclogin.utils
 
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
+import com.lucascabral.biometriclogin.R
 
 // Since we are using the same methods in more than one Activity, better give them their own file.
 object BiometricPromptUtils {

@@ -1,4 +1,4 @@
-package com.lucascabral.biometriclogin
+package com.lucascabral.biometriclogin.ui.activities
 
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +7,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.Observer
+import com.lucascabral.biometriclogin.FailedLoginFormState
+import com.lucascabral.biometriclogin.ui.viewmodel.LoginViewModel
+import com.lucascabral.biometriclogin.SampleAppUser
+import com.lucascabral.biometriclogin.SuccessfulLoginFormState
 import com.lucascabral.biometriclogin.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
